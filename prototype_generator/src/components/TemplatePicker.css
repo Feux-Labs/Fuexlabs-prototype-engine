@@ -1,0 +1,63 @@
+.tpl-picker { margin: 24px 0; }
+.tpl-picker-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.tpl-picker-label { font-weight: 600; font-size: 0.85rem; color: #444; }
+.tpl-random-btn {
+  border: 1px solid #d8d5cc; background: #fff; border-radius: 999px;
+  padding: 6px 14px; font-size: 0.82rem; cursor: pointer;
+}
+.tpl-random-btn:hover { background: #f4f2ea; }
+
+.tpl-strip {
+  display: flex; gap: 12px; overflow-x: auto; padding: 6px 2px 14px;
+  scroll-snap-type: x proximity;
+}
+.tpl-thumb {
+  flex: 0 0 auto;
+  width: 130px;
+  border: none; background: none; padding: 0; cursor: pointer;
+  scroll-snap-align: start;
+  text-align: left;
+}
+.tpl-thumb-name {
+  display: block; margin-top: 6px; font-size: 0.78rem; font-weight: 600;
+}
+.tpl-thumb.active .tpl-thumb-name { color: #14181f; }
+
+.wf-frame {
+  width: 130px; height: 88px;
+  border: 2px solid #e2ded2;
+  padding: 8px;
+  display: flex; flex-direction: column; gap: 6px;
+  overflow: hidden;
+}
+.tpl-thumb.active .wf-frame { border-color: #14181f; box-shadow: 0 0 0 2px rgba(20,24,31,0.15); }
+
+.wf-centered { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.wf-dot { width: 14px; height: 14px; border-radius: 50%; }
+.wf-dot.small { width: 10px; height: 10px; }
+.wf-line { height: 3px; border-radius: 2px; width: 60%; }
+.wf-line.short { width: 50%; }
+.wf-line.shorter { width: 34%; }
+.wf-line.center { align-self: center; }
+
+.wf-row { display: flex; gap: 4px; margin-top: auto; }
+.wf-block { flex: 1; height: 14px; border-radius: 2px; }
+.wf-col { display: flex; flex-direction: column; gap: 3px; margin-top: auto; }
+
+.wf-alt-line { height: 8px; width: 70%; border-radius: 2px; }
+.wf-alt-line.rev { align-self: flex-end; width: 55%; }
+
+.wf-split { display: flex; gap: 6px; align-items: center; }
+.wf-split-text { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.wf-split-visual { width: 34px; height: 28px; border-radius: 3px; }
+
+.wf-banner {
+  height: 30px; border-radius: 3px; display: flex; align-items: center; justify-content: center;
+}
+
+.wf-frame-sidebar { flex-direction: row; padding: 0; }
+.wf-sidebar { width: 22px; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px; }
+.wf-sidebar-main { flex: 1; padding: 8px; display: flex; flex-direction: column; justify-content: flex-end; }

@@ -1,0 +1,58 @@
+{
+  "school": {
+    "title": "A classroom with students at the College of Medicine, FUASK.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:A_classroom_with_students_at_the_College_of_Medicine,_FUASK.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Kambai_Akau\" title=\"User:Kambai Akau\">Kambai Akau</a>",
+    "local": "/images/business/school.jpg"
+  },
+  "restaurant": {
+    "title": "File:Restaurant room of Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Restaurant_room_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+    "local": "/images/business/restaurant.jpg"
+  },
+  "store": {
+    "title": "File:DFC 0796 A woman browsing shirts on a crowded clothing rack in a busy store with mannequins and folded garments nearby.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:DFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/PattayaPatrol/\">PattayaPatrol</a>",
+    "local": "/images/business/store.jpg"
+  },
+  "hotel": {
+    "title": "File:Entrance of Amantaka luxury Resort & Hotel at blue hour in Luang Prabang Laos.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Amantaka_luxury_Resort_%26_Hotel_at_blue_hour_in_Luang_Prabang_Laos.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+    "local": "/images/business/hotel.jpg"
+  },
+  "church": {
+    "title": "File:Marlborough Road Methodist Church, Marlborough Road, Banbury (April 2023) (Sanctuary).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Marlborough_Road_Methodist_Church,_Marlborough_Road,_Banbury_(April_2023)_(Sanctuary).jpg",
+    "license": "CC0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Hassocks5489\" title=\"User:Hassocks5489\">User:Hassocks5489</a>",
+    "local": "/images/business/church.jpg"
+  },
+  "law": {
+    "title": "Employment law office zoom background.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Employment_law_office_zoom_background.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tony Wong",
+    "local": "/images/business/law.jpg"
+  },
+  "realestate": {
+    "title": "Gedersberg 02.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Gedersberg_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Clemens_Stockner\" title=\"User:Clemens Stockner\">Clemens Stockner</a>",
+    "local": "/images/business/realestate.jpg"
+  },
+  "generic": {
+    "title": "File:Vista desde abajo del exterior de un moderno edificio de oficinas.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Vista_desde_abajo_del_exterior_de_un_moderno_edificio_de_oficinas.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Rjcastillo\" title=\"User:Rjcastillo\">Rjcastillo</a>",
+    "local": "/images/business/generic.jpg"
+  }
+}

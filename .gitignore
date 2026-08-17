@@ -1,0 +1,66 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Next.js build and production outputs
+.next/
+out/
+build/
+dist/
+
+# Local environment variables and secrets
+.env*.local
+.env
+.env.development
+.env.production
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Vercel deployment artifacts
+.vercel
+
+# TypeScript build cache
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing caches
+.turbo/
+.cache/
+coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors configuration
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Dependency directories (handles root and subdirectories)
+node_modules/
+feux_labs_homepage/node_modules/
+
+# Next.js build outputs
+.next/
+feux_labs_homepage/.next/
+out/
+build/
+dist/
+
+# Local environment variables and secrets
+.env*.local
+.env
+.env.development
+.env.production
+feux_labs_homepage/.env*.local
+feux_labs_homepage/.env

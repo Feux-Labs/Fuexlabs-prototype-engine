@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "copy-link-test-co-2",
+    "name": "Copy Link Test Co 2",
+    "businessType": "generic",
+    "templateId": "classic",
+    "accent": "#1A73E8",
+    "accentDark": "#0B57BE",
+    "heroImage": "/images/business/generic.jpg",
+    "tagline": "Proudly serving your area and beyond.",
+    "about": "Your Business is committed to delivering great service and real value to every customer.",
+    "sectionTitle": "What We Do",
+    "sectionItems": [
+      {
+        "title": "Reliable Service",
+        "desc": "Consistent results you can count on, every time."
+      },
+      {
+        "title": "Straightforward Approach",
+        "desc": "No jargon — just clear, honest work."
+      },
+      {
+        "title": "Always Reachable",
+        "desc": "Easy to reach when you need us."
+      }
+    ],
+    "offerings": [
+      {
+        "title": "Quality You Can Trust",
+        "desc": "Consistent, dependable standards behind everything we do."
+      },
+      {
+        "title": "Experienced Team",
+        "desc": "A dedicated team committed to getting it right for you."
+      },
+      {
+        "title": "Trusted & Reliable",
+        "desc": "Built on relationships that keep people coming back."
+      }
+    ],
+    "address": "",
+    "phone": "",
+    "createdAt": "2026-08-17T20:39:48.233Z"
+  },
+  {
+    "slug": "copy-link-test-co",
+    "name": "Copy Link Test Co",
+    "businessType": "generic",
+    "templateId": "classic",
+    "accent": "#1A73E8",
+    "accentDark": "#0B57BE",
+    "heroImage": "/images/business/generic.jpg",
+    "tagline": "Proudly serving your area and beyond.",
+    "about": "Your Business is committed to delivering great service and real value to every customer.",
+    "sectionTitle": "What We Do",
+    "sectionItems": [
+      {
+        "title": "Reliable Service",
+        "desc": "Consistent results you can count on, every time."
+      },
+      {
+        "title": "Straightforward Approach",
+        "desc": "No jargon — just clear, honest work."
+      },
+      {
+        "title": "Always Reachable",
+        "desc": "Easy to reach when you need us."
+      }
+    ],
+    "offerings": [
+      {
+        "title": "Quality You Can Trust",
+        "desc": "Consistent, dependable standards behind everything we do."
+      },
+      {
+        "title": "Experienced Team",
+        "desc": "A dedicated team committed to getting it right for you."
+      },
+      {
+        "title": "Trusted & Reliable",
+        "desc": "Built on relationships that keep people coming back."
+      }
+    ],
+    "address": "",
+    "phone": "",
+    "createdAt": "2026-08-17T20:37:57.756Z"
+  },
+  {
+    "slug": "sunrise-kids-academy",
+    "name": "Sunrise Kids Academy",
+    "businessType": "generic",
+    "templateId": "split-modern",
+    "accent": "#C99700",
+    "accentDark": "#8A6900",
+    "heroIcon": "🏢",
+    "tagline": "Proudly serving your area and beyond.",
+    "about": "Your Business is committed to delivering great service and real value to every customer.",
+    "sectionTitle": "What We Do",
+    "sectionItems": [
+      {
+        "icon": "✅",
+        "title": "Reliable Service",
+        "desc": "Consistent results you can count on, every time."
+      },
+      {
+        "icon": "💡",
+        "title": "Straightforward Approach",
+        "desc": "No jargon — just clear, honest work."
+      },
+      {
+        "icon": "💬",
+        "title": "Always Reachable",
+        "desc": "Easy to reach when you need us."
+      }
+    ],
+    "offerings": [
+      {
+        "icon": "✨",
+        "title": "Quality You Can Trust",
+        "desc": "Consistent, dependable standards behind everything we do."
+      },
+      {
+        "icon": "🤝",
+        "title": "Experienced Team",
+        "desc": "A dedicated team committed to getting it right for you."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Trusted & Reliable",
+        "desc": "Built on relationships that keep people coming back."
+      }
+    ],
+    "address": "Wuse 2, Abuja",
+    "phone": "08099998888",
+    "createdAt": "2026-08-17T19:58:16.573Z"
+  }
+]
