@@ -348,3 +348,30 @@ h1 {
 }
 .proto-root[data-theme="soft"] .proto-card { box-shadow: 0 4px 18px rgba(20,20,30,0.05); border: none; }
 .proto-root[data-theme="soft"] .proto-logo { box-shadow: 0 6px 20px rgba(20,20,30,0.15); }
+
+.proto-root[data-theme="saas"] {
+  --paper: #0a0a0c;
+  --ink: #f2f2f3;
+  --muted: #9a9aa2;
+  --line: #232326;
+  --radius: 10px;
+  --font-head: "Segoe UI", system-ui, sans-serif;
+}
+.proto-root[data-theme="saas"] h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+}
+.proto-root[data-theme="saas"] .proto-hero-banner-inner .proto-tagline { color: rgba(255,255,255,0.7); }
+.proto-root[data-theme="saas"] .proto-card { background: #131316; border-color: var(--line); }
+.proto-root[data-theme="saas"] .proto-tile-solid { background: #131316 !important; border: 1px solid var(--line); }
+.proto-root[data-theme="saas"] .proto-cta { border-radius: 999px; }
+.proto-root[data-theme="saas"] .proto-footer { background: #050506; }
+.proto-hero-saas-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, color-mix(in srgb, var(--accent) 25%, transparent), transparent),
+    #0a0a0c;
+  z-index: 0;
+}

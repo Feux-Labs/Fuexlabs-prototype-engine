@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { ProtoRecord, SectionItem } from "@/lib/types";
 import { getTemplate } from "@/lib/templates";
+import GlowRibbon from "./GlowRibbon";
 import "./PrototypeLanding.css";
 
 // When a card needs a photo but only has one source image to draw from (the
@@ -282,7 +283,17 @@ export default function PrototypeLanding(props: ProtoRecord) {
             </div>
           </div>
         )}
-        {template.heroLayout === "banner" && (
+        {template.heroLayout === "banner" && template.theme === "saas" && (
+          <>
+            <div className="proto-hero-saas-bg" />
+            <GlowRibbon accent={accent} accentDark={accentDark} />
+            <div className="proto-hero-banner-inner">
+              <h1>{name || "Your Business Name"}</h1>
+              <p className="proto-tagline">{tagline}</p>
+            </div>
+          </>
+        )}
+        {template.heroLayout === "banner" && template.theme !== "saas" && (
           <>
             <HeroMedia image={heroImage} accent={accent} accentDark={accentDark} />
             <div className="proto-hero-scrim" />

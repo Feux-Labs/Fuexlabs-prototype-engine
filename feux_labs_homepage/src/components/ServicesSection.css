@@ -1,0 +1,26 @@
+.services-section { background: var(--bg-page); }
+
+.services-grid .service-card {
+  border: none;
+  border-top: 3px solid transparent;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+.services-grid .service-card.active {
+  border-top-color: var(--link-blue);
+  background: var(--card-hover-bg);
+}
+
+.services-workflow-panel {
+  padding: 8px 0 clamp(32px, 6vw, 56px);
+}
+.services-workflow-title {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  font-weight: 700;
+  margin: 20px 0 4px;
+}

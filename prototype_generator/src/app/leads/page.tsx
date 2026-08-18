@@ -8,8 +8,8 @@ import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
 
-export default function LeadsPage() {
-  const records = readAll();
+export default async function LeadsPage() {
+  const records = await readAll();
   const h = headers();
   const proto = h.get("x-forwarded-proto") || "http";
   const host = h.get("host");

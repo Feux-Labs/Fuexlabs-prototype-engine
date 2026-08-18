@@ -1,0 +1,79 @@
+.workflow {
+  position: relative;
+  padding: 28px 20px 8px 12px;
+  overflow: hidden;
+}
+.workflow-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(260px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--link-blue) 16%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.workflow:hover .workflow-spotlight { opacity: 1; }
+
+.workflow-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.workflow-connector {
+  position: absolute;
+  left: 17px;
+  top: -12px;
+  width: 2px;
+  height: 24px;
+  background: var(--border);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.6s ease, background 0.5s ease;
+}
+.workflow-connector.grown {
+  transform: scaleY(1);
+  background: var(--link-blue);
+}
+
+.workflow-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono), monospace;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease, background 0.5s ease, color 0.5s ease;
+}
+.workflow-chip.lit {
+  border-color: var(--link-blue);
+  background: color-mix(in srgb, var(--link-blue) 22%, var(--card-bg));
+  color: var(--link-blue);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--link-blue) 55%, transparent);
+}
+
+.workflow-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
+}
+.workflow-label.visible {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-connector, .workflow-chip, .workflow-label { transition: none; }
+}

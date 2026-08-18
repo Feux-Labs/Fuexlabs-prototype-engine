@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "A business name is required." }, { status: 400 });
   }
 
-  const slug = uniqueSlug(slugify(body.name));
+  const slug = await uniqueSlug(slugify(body.name));
 
   const record: ProtoRecord = {
     slug,
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     createdAt: new Date().toISOString(),
   };
 
-  saveRecord(record);
+  await saveRecord(record);
 
   return NextResponse.json({ slug: record.slug });
 }

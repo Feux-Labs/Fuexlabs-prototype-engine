@@ -12,7 +12,8 @@ export type Theme =
   | "magazine"
   | "warm"
   | "midnight"
-  | "soft";
+  | "soft"
+  | "saas";
 
 export type TemplateConfig = {
   id: string;
@@ -37,6 +38,7 @@ export const TEMPLATES: TemplateConfig[] = [
   { id: "midnight-sidebar", name: "Executive", heroLayout: "sidebar", sectionLayout: "grid", theme: "midnight" },
   { id: "soft-split", name: "Soft", heroLayout: "split", sectionLayout: "rows", theme: "soft" },
   { id: "bold-sidebar", name: "Statement", heroLayout: "sidebar", sectionLayout: "alternating", theme: "bold" },
+  { id: "saas-dark", name: "SaaS Dark", heroLayout: "banner", sectionLayout: "grid", theme: "saas" },
 ];
 
 export function getTemplate(id: string): TemplateConfig {

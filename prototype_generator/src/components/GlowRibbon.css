@@ -1,0 +1,30 @@
+.ribbon-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.ribbon-swirl {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: ribbon-swirl 16s ease-in-out infinite, ribbon-hue 14s linear infinite;
+}
+
+@keyframes ribbon-swirl {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(5deg) scale(1.04); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes ribbon-hue {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbon-swirl { animation: none; }
+}

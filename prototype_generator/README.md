@@ -18,7 +18,20 @@ Open http://localhost:3300 (or whatever port you choose — see below).
   WhatsApp links.
 - **A saved prototype** — `/p/<slug>` — the actual page you'd send to a lead.
 
-Saved prototypes are stored in `data/leads.json` (plain JSON, no database needed).
+Saved prototypes are stored in `data/leads.json` locally (plain JSON, no database
+needed for `npm run dev`). **On Vercel this does not work** — serverless functions
+there have a read-only/ephemeral filesystem, so saved prototypes silently vanish.
+See "Deploying to Vercel" below.
+
+## Deploying to Vercel
+
+1. In the Vercel dashboard, open this project → **Storage** → **Create Database** →
+   **KV** → connect it to the project. This injects `KV_REST_API_URL` and
+   `KV_REST_API_TOKEN` into your environment automatically.
+2. Redeploy. `src/lib/store.ts` detects those env vars at runtime and switches from
+   the local JSON file to KV automatically — no code changes needed.
+3. Without a KV store connected, saves will appear to succeed but disappear on the
+   next request. If prototypes are vanishing, this step is why.
 
 ## How it works
 

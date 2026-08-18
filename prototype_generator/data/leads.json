@@ -1,5 +1,48 @@
 [
   {
+    "slug": "kv-store-test-co",
+    "name": "KV Store Test Co",
+    "businessType": "generic",
+    "templateId": "saas-dark",
+    "accent": "#1A73E8",
+    "accentDark": "#0B57BE",
+    "heroImage": "/images/business/generic.jpg",
+    "tagline": "Proudly serving your area and beyond.",
+    "about": "Your Business is committed to delivering great service and real value to every customer.",
+    "sectionTitle": "What We Do",
+    "sectionItems": [
+      {
+        "title": "Reliable Service",
+        "desc": "Consistent results you can count on, every time."
+      },
+      {
+        "title": "Straightforward Approach",
+        "desc": "No jargon — just clear, honest work."
+      },
+      {
+        "title": "Always Reachable",
+        "desc": "Easy to reach when you need us."
+      }
+    ],
+    "offerings": [
+      {
+        "title": "Quality You Can Trust",
+        "desc": "Consistent, dependable standards behind everything we do."
+      },
+      {
+        "title": "Experienced Team",
+        "desc": "A dedicated team committed to getting it right for you."
+      },
+      {
+        "title": "Trusted & Reliable",
+        "desc": "Built on relationships that keep people coming back."
+      }
+    ],
+    "address": "",
+    "phone": "",
+    "createdAt": "2026-08-18T10:12:29.678Z"
+  },
+  {
     "slug": "copy-link-test-co-2",
     "name": "Copy Link Test Co 2",
     "businessType": "generic",
