@@ -67,6 +67,19 @@
 }
 
 .linksBar { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+
+.supportSection { margin-top: 16px; padding-top: 14px; border-top: 1px solid #cdeedd; }
+.supportText { margin: 0 0 8px; color: #0f5228; }
+.supportPanel {
+  margin-top: 12px; padding: 14px; border-radius: 10px; background: #fff;
+  border: 1px solid #bfe9d0;
+}
+.supportLabel {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #6b7280; margin-bottom: 4px;
+}
+.supportValue { font-size: 0.95rem; font-weight: 700; color: #14181f; margin-bottom: 2px; }
+.supportNote { font-size: 0.82rem; color: #6b7280; margin: 12px 0 8px; }
 .linkBtn {
   display: inline-block; padding: 8px 14px; border-radius: 999px; font-size: 0.82rem;
   font-weight: 600; text-decoration: none; border: 1px solid #14181f; color: #14181f;

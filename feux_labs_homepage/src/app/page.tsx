@@ -161,11 +161,11 @@ const FOOTER_COLUMNS = [
 const MISSION_VISION = [
   {
     label: "Our Mission",
-    text: "To build software, AI, and automation that solves real problems for real people — designed with care, shipped fast, and built to last.",
+    text: "To build software, AI, and automation that solves real problems for real people, designed with care, shipped fast, and built to last.",
   },
   {
     label: "Our Vision",
-    text: "To be a leading software and AI automation studio out of Abuja — turning ambitious ideas into products that actually ship and actually work.",
+    text: "To be a leading software and AI automation studio out of Abuja, turning ambitious ideas into products that actually ship and actually work.",
   },
 ];
 

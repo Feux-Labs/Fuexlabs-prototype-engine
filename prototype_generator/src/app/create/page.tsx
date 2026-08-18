@@ -12,6 +12,11 @@ import PrototypeLanding from "@/components/PrototypeLanding";
 import TemplatePicker from "@/components/TemplatePicker";
 import styles from "./page.module.css";
 
+// TODO: replace with the real Opay account name/number before this ships —
+// these are placeholders and must not be shown to real users as-is.
+const OPAY_ACCOUNT_NAME = "Add real Opay account name";
+const OPAY_ACCOUNT_NUMBER = "Add real Opay account number";
+
 function ItemEditor({
   items,
   onChange,
@@ -296,6 +301,34 @@ export default function Home() {
                 <a className={`${styles.linkBtn} ${styles.primary}`} href={saved.waLink} target="_blank" rel="noreferrer">
                   Send on WhatsApp
                 </a>
+              )}
+            </div>
+
+            <div className={styles.supportSection}>
+              <p className={styles.supportText}>
+                FastPrototype is free to use. If it helped you, you can support the project
+                that built it.
+              </p>
+              <button
+                type="button"
+                className={styles.linkBtn}
+                onClick={() => setShowSupport((s) => !s)}
+              >
+                {showSupport ? "Hide" : "Support Us"}
+              </button>
+
+              {showSupport && (
+                <div className={styles.supportPanel}>
+                  <div className={styles.supportLabel}>OPay</div>
+                  <div className={styles.supportValue}>{OPAY_ACCOUNT_NAME}</div>
+                  <div className={styles.supportValue}>{OPAY_ACCOUNT_NUMBER}</div>
+                  <p className={styles.supportNote}>
+                    Want to support us automatically each month? Subscriptions are coming soon.
+                  </p>
+                  <button type="button" className={styles.linkBtn} disabled>
+                    Subscribe — Coming Soon
+                  </button>
+                </div>
               )}
             </div>
           </div>
