@@ -3,7 +3,7 @@ import RotatingHeadline from "@/components/RotatingHeadline";
 import ThemeToggle from "@/components/ThemeToggle";
 import ServicesSection from "@/components/ServicesSection";
 import Logo from "@/components/Logo";
-import { PhoneIcon, WhatsAppIcon, FacebookIcon, InstagramIcon, ClockIcon } from "@/components/icons";
+import { WhatsAppIcon, FacebookIcon, InstagramIcon, ClockIcon } from "@/components/icons";
 
 const PHONE_DISPLAY = "0906 646 2428";
 const PHONE_TEL = "tel:+2349066462428";
@@ -65,7 +65,7 @@ const PROJECTS = [
   },
   {
     name: "OneNest",
-    desc: "Parent company behind MamaCare and LifeAdmin — products that simplify life and support well-being.",
+    desc: "Parent company behind MamaCare and LifeAdmin, products that simplify life and support well-being.",
     href: "https://onenesthq.com",
     status: "Live",
     statusClass: "status-live",
@@ -119,6 +119,45 @@ const PROJECTS = [
   },
 ];
 
+const FOOTER_COLUMNS = [
+  {
+    heading: "Company",
+    links: [
+      { label: "Home", href: "#" },
+      { label: "Our Services", href: "#services" },
+      { label: "Mission & Vision", href: "#mission" },
+      { label: "Our Work", href: "#proof" },
+    ],
+  },
+  {
+    heading: "Services",
+    links: [
+      { label: "Build Software", href: "#services" },
+      { label: "Build For Clients", href: "#services" },
+      { label: "AI & Automation", href: "#services" },
+      { label: "Consulting", href: "#services" },
+    ],
+  },
+  {
+    heading: "Projects",
+    links: [
+      { label: "MamaCare", href: "https://mamacareng.com" },
+      { label: "OneNest", href: "https://onenesthq.com" },
+      { label: "Todaynews.ng", href: "https://todaynews.ng" },
+      { label: "FastPrototype", href: FASTPROTOTYPE_URL },
+    ],
+  },
+  {
+    heading: "Get In Touch",
+    links: [
+      { label: PHONE_DISPLAY, href: PHONE_TEL },
+      { label: `WhatsApp: ${WHATSAPP_DISPLAY}`, href: WHATSAPP_START },
+      { label: "Facebook", href: FACEBOOK_URL },
+      { label: "Instagram", href: INSTAGRAM_URL },
+    ],
+  },
+];
+
 const MISSION_VISION = [
   {
     label: "Our Mission",
@@ -157,7 +196,7 @@ export default function Home() {
             <RotatingHeadline />
             <p className="hero-desc">
               Feux Labs builds software, designs automation systems, and ships AI-powered tools
-              that do real work — from concept to production.
+              that do real work, from concept to production.
             </p>
             <div className="hero-actions">
               <a href={WHATSAPP_START} target="_blank" rel="noreferrer" className="btn-primary">
@@ -172,7 +211,7 @@ export default function Home() {
 
         <ServicesSection services={SERVICES} />
 
-        <section className="mv-section">
+        <section className="mv-section" id="mission">
           <div className="wrap mv-grid">
             {MISSION_VISION.map((m) => (
               <div className="mv-card" key={m.label}>
@@ -236,54 +275,56 @@ export default function Home() {
 
       <footer className="footer" id="contact">
         <div className="footer-inner">
-          <div className="footer-top">
-            <div>
-              <Logo />
+          <div className="footer-columns">
+            {FOOTER_COLUMNS.map((col) => (
+              <div className="footer-col" key={col.heading}>
+                <div className="footer-col-heading">{col.heading}</div>
+                {col.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="footer-col-link"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ))}
+            <div className="footer-col footer-col-brand">
+              <div className="footer-col-heading">Feux Labs</div>
+              <div className="footer-brand-phone">{PHONE_DISPLAY}</div>
+              <p className="footer-brand-address">
+                Abuja,
+                <br />
+                Nigeria
+              </p>
             </div>
-            <div className="footer-contact-grid">
-              <a href={PHONE_TEL} className="contact-item">
-                <span className="contact-icon">
-                  <PhoneIcon size={20} />
-                </span>
-                <span className="contact-text">
-                  <span className="contact-label">Call</span>
-                  <span className="contact-value">{PHONE_DISPLAY}</span>
-                </span>
+          </div>
+
+          <div className="footer-divider" />
+
+          <div className="footer-bottom-row">
+            <div className="footer-social">
+              <span>Follow us:</span>
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" aria-label="Facebook" className="footer-social-icon">
+                <FacebookIcon size={18} />
               </a>
-              <a href={WHATSAPP_START} target="_blank" rel="noreferrer" className="contact-item">
-                <span className="contact-icon">
-                  <WhatsAppIcon size={20} />
-                </span>
-                <span className="contact-text">
-                  <span className="contact-label">WhatsApp</span>
-                  <span className="contact-value">{WHATSAPP_DISPLAY}</span>
-                </span>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram" className="footer-social-icon">
+                <InstagramIcon size={18} />
               </a>
-              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="contact-item">
-                <span className="contact-icon">
-                  <FacebookIcon size={20} />
-                </span>
-                <span className="contact-text">
-                  <span className="contact-label">Facebook</span>
-                  <span className="contact-value">@feuxlabs</span>
-                </span>
+              <a href={WHATSAPP_START} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="footer-social-icon">
+                <WhatsAppIcon size={18} />
               </a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="contact-item">
-                <span className="contact-icon">
-                  <InstagramIcon size={20} />
-                </span>
-                <span className="contact-text">
-                  <span className="contact-label">Instagram</span>
-                  <span className="contact-value">@feuxlabs</span>
-                </span>
+              <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="footer-link">
+                GitHub
               </a>
             </div>
           </div>
-          <div className="footer-bottom">
-            <span>Feux Labs — Abuja, Nigeria</span>
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="footer-link">
-              GitHub
-            </a>
+
+          <div className="footer-copyright">
+            <span>© 2026 Feux Labs. All rights reserved.</span>
           </div>
         </div>
       </footer>

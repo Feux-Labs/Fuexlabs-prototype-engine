@@ -11,7 +11,7 @@ export default function ServicesSection({ services }: { services: Service[] }) {
   const activeService = services[active];
 
   return (
-    <section className="services-section">
+    <section className="services-section" id="services">
       <div className="services-grid">
         {services.map((s, i) => (
           <button
