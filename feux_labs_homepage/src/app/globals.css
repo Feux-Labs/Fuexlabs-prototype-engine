@@ -73,16 +73,16 @@ a { color: inherit; }
   gap: 16px;
   padding: 16px 24px;
 }
-.brand-logo {
-  height: 40px;
-  width: auto;
-  /* The logo mark is navy/blue and reads poorly on a dark navbar — force it
-     white by default (dark theme), then undo that in light mode where the
-     original navy on a white navbar already has plenty of contrast. */
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s ease;
-}
-:root[data-theme="light"] .brand-logo { filter: none; }
+.brand-logo-wrap { display: inline-block; height: 40px; }
+.brand-logo { height: 40px; width: auto; display: block; }
+/* Two real image variants (not a CSS filter — the source PNG's "transparent"
+   background turned out to be near-white at partial alpha, so filtering it
+   left a translucent white box around the mark). Swap which one renders
+   based on theme instead. */
+.brand-logo-dark { display: block; }
+.brand-logo-light { display: none; }
+:root[data-theme="light"] .brand-logo-dark { display: none; }
+:root[data-theme="light"] .brand-logo-light { display: block; }
 .navbar-actions { display: flex; align-items: center; gap: 10px; }
 .navbar-divider { width: 1px; height: 22px; background: var(--border); }
 
@@ -259,6 +259,24 @@ a.proof-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0
   border-bottom: 1px solid var(--border);
 }
 .proof-media-logo { object-fit: contain; padding: 20px; background: var(--bg-surface); }
+.proof-media-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+}
+.proof-media-wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A73E8, #0B57BE);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.proof-media-wordmark span { font-weight: 500; opacity: 0.85; }
 .proof-desc { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
 .status-badge {
   display: inline-block;

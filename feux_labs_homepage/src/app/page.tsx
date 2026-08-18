@@ -2,7 +2,8 @@ import GlowRibbon from "@/components/GlowRibbon";
 import RotatingHeadline from "@/components/RotatingHeadline";
 import ThemeToggle from "@/components/ThemeToggle";
 import ServicesSection from "@/components/ServicesSection";
-import { PhoneIcon, WhatsAppIcon, FacebookIcon, InstagramIcon } from "@/components/icons";
+import Logo from "@/components/Logo";
+import { PhoneIcon, WhatsAppIcon, FacebookIcon, InstagramIcon, ClockIcon } from "@/components/icons";
 
 const PHONE_DISPLAY = "0906 646 2428";
 const PHONE_TEL = "tel:+2349066462428";
@@ -52,6 +53,7 @@ const PROJECTS = [
     href: "https://mamacareng.com",
     status: "Live",
     statusClass: "status-live",
+    logo: "/images/projects/mamacare-logo.png",
   },
   {
     name: "MamaCare Mobile App",
@@ -59,6 +61,7 @@ const PROJECTS = [
     href: null,
     status: "iOS & Android",
     statusClass: "status-progress",
+    logo: "/images/projects/mamacare-logo.png",
   },
   {
     name: "OneNest",
@@ -66,6 +69,7 @@ const PROJECTS = [
     href: "https://onenesthq.com",
     status: "Live",
     statusClass: "status-live",
+    logo: "/images/projects/onenest-logo.png",
   },
   {
     name: "Todaynews.ng",
@@ -73,6 +77,7 @@ const PROJECTS = [
     href: "https://todaynews.ng",
     status: "Live",
     statusClass: "status-live",
+    logo: "/images/projects/todaynews-logo.png",
   },
   {
     name: "BullStock Nigeria",
@@ -80,6 +85,7 @@ const PROJECTS = [
     href: null,
     status: "In Development",
     statusClass: "status-progress",
+    icon: "clock",
   },
   {
     name: "PharmaSense",
@@ -87,6 +93,7 @@ const PROJECTS = [
     href: null,
     status: "In Development",
     statusClass: "status-progress",
+    icon: "clock",
   },
   {
     name: "BookingX",
@@ -108,6 +115,7 @@ const PROJECTS = [
     href: "https://prototypes.feuxlabs.com.ng",
     status: "Live",
     statusClass: "status-live",
+    wordmark: true,
   },
 ];
 
@@ -127,8 +135,7 @@ export default function Home() {
     <>
       <header className="navbar">
         <div className="wrap navbar-inner">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Feux Labs" className="brand-logo" />
+          <Logo />
           <div className="navbar-actions">
             <ThemeToggle />
             <span className="navbar-divider" aria-hidden="true" />
@@ -180,21 +187,38 @@ export default function Home() {
           <div className="wrap">
             <div className="section-title">Some Of Our Past Work</div>
             <div className="proof-cards">
-              {PROJECTS.map((p) =>
-                p.href ? (
-                  <a className="proof-card" href={p.href} target="_blank" rel="noreferrer" key={p.name}>
-                    <span className={`status-badge ${p.statusClass}`}>{p.status}</span>
-                    <div className="proof-name">{p.name}</div>
-                    <div className="proof-desc">{p.desc}</div>
-                  </a>
-                ) : (
-                  <div className="proof-card proof-card-static" key={p.name}>
+              {PROJECTS.map((p) => {
+                const media = p.wordmark ? (
+                  <div className="proof-media proof-media-wordmark">
+                    Fast<span>Prototype</span>
+                  </div>
+                ) : p.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img className="proof-media proof-media-logo" src={p.logo} alt="" />
+                ) : p.icon === "clock" ? (
+                  <div className="proof-media proof-media-icon">
+                    <ClockIcon size={28} />
+                  </div>
+                ) : null;
+                const body = (
+                  <div className="proof-card-body">
                     <span className={`status-badge ${p.statusClass}`}>{p.status}</span>
                     <div className="proof-name">{p.name}</div>
                     <div className="proof-desc">{p.desc}</div>
                   </div>
-                )
-              )}
+                );
+                return p.href ? (
+                  <a className="proof-card" href={p.href} target="_blank" rel="noreferrer" key={p.name}>
+                    {media}
+                    {body}
+                  </a>
+                ) : (
+                  <div className="proof-card proof-card-static" key={p.name}>
+                    {media}
+                    {body}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -214,8 +238,7 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-top">
             <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Feux Labs" className="brand-logo" />
+              <Logo />
             </div>
             <div className="footer-contact-grid">
               <a href={PHONE_TEL} className="contact-item">

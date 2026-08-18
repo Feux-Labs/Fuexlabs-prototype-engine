@@ -1,79 +1,109 @@
 .workflow {
   position: relative;
-  padding: 28px 20px 8px 12px;
-  overflow: hidden;
+  padding: 8px 8px 8px 8px;
 }
 .workflow-spotlight {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(260px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--link-blue) 16%, transparent), transparent 70%);
+  background: radial-gradient(280px circle at var(--spot-x, 50%) var(--spot-y, 50%), color-mix(in srgb, var(--link-blue) 16%, transparent), transparent 70%);
   opacity: 0;
   transition: opacity 0.25s ease;
+  z-index: 0;
 }
 .workflow:hover .workflow-spotlight { opacity: 1; }
 
-.workflow-step {
-  position: relative;
+.workflow-svg { position: absolute; inset: 0; z-index: 0; }
+.workflow-track { stroke: var(--border); stroke-width: 2; }
+.workflow-line {
+  stroke: var(--link-blue);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.9s ease;
+}
+.workflow-line.drawn { stroke-dashoffset: 0; }
+
+.workflow-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.workflow-shape {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 0;
+  cursor: default;
+  opacity: 0.35;
+  transform: scale(0.85);
+  transition: opacity 0.5s ease, transform 0.35s ease, border-color 0.4s ease, box-shadow 0.35s ease;
+}
+.workflow-shape.lit { opacity: 1; transform: scale(1); }
+
+/* Circle stage: numbered chip with its label always shown as a caption below it. */
+.shape-circle {
+  flex-direction: column;
+  gap: 8px;
+}
+.shape-circle .workflow-shape-label {
+  white-space: normal;
+  text-align: center;
+  max-width: 96px;
+}
+.shape-circle:hover .workflow-shape-num,
+.shape-circle:focus-visible .workflow-shape-num,
+.shape-circle.expanded .workflow-shape-num {
+  border-color: var(--link-blue);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--link-blue) 45%, transparent);
+  transform: scale(1.1);
 }
 
-.workflow-connector {
-  position: absolute;
-  left: 17px;
-  top: -12px;
-  width: 2px;
-  height: 24px;
-  background: var(--border);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.6s ease, background 0.5s ease;
+/* Bar stage: the elongated "tech line" pill, number + label side by side. */
+.shape-bar {
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  padding: 10px 22px;
+  border-radius: 999px;
 }
-.workflow-connector.grown {
-  transform: scaleY(1);
-  background: var(--link-blue);
+.shape-bar:hover,
+.shape-bar:focus-visible,
+.shape-bar.expanded {
+  border-color: var(--link-blue);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--link-blue) 45%, transparent);
+  transform: scale(1.06);
 }
 
-.workflow-chip {
+.workflow-shape-num {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 1.5px solid var(--border);
   background: var(--card-bg);
-  color: var(--text-muted);
+  border: 1.5px solid var(--border);
   font-size: 13px;
   font-weight: 700;
   font-family: var(--font-mono), monospace;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease, background 0.5s ease, color 0.5s ease;
-}
-.workflow-chip.lit {
-  border-color: var(--link-blue);
-  background: color-mix(in srgb, var(--link-blue) 22%, var(--card-bg));
   color: var(--link-blue);
-  box-shadow: 0 0 18px color-mix(in srgb, var(--link-blue) 55%, transparent);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+}
+.shape-bar .workflow-shape-num { width: auto; height: auto; border: none; background: none; }
+.workflow-shape-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
 }
 
-.workflow-label {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-muted);
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease;
-}
-.workflow-label.visible {
-  opacity: 1;
-  transform: translateX(0);
-  color: var(--ink);
+@media (max-width: 560px) {
+  .workflow-node { left: 50% !important; }
+  .workflow-line, .workflow-track { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .workflow-connector, .workflow-chip, .workflow-label { transition: none; }
+  .workflow-shape, .workflow-line { transition: none; }
 }
