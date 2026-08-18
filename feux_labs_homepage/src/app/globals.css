@@ -259,7 +259,11 @@ a.proof-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
 }
-.proof-media-logo { object-fit: contain; padding: 20px; background: var(--bg-surface); }
+/* These are real partner logos with an opaque white background baked into
+   the source PNG (not transparent) — recoloring them isn't ours to do, so
+   they get a deliberate white card chip in both themes instead of an
+   accidental mismatched box. */
+.proof-media-logo { object-fit: contain; padding: 20px; background: #ffffff; }
 .proof-media-icon {
   display: flex;
   align-items: center;
@@ -385,7 +389,19 @@ a.proof-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0
 @media (max-width: 720px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-columns { grid-template-columns: repeat(2, 1fr); }
-  .footer-bottom-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-bottom-row { flex-direction: column; align-items: center; gap: 16px; }
+
+  /* Single-column mobile layout reads better centered than left-aligned. */
+  .section-title { text-align: center; }
+  .mv-card { text-align: center; }
+  .mv-text { margin-left: auto; margin-right: auto; }
+  .services-workflow-title { text-align: center; }
+  .services-workflow-panel { text-align: center; }
+  .footer-col { text-align: center; }
+  .footer-col-brand { text-align: center; }
+  .footer-brand-address { margin: 0 auto; }
+  .footer-social { justify-content: center; width: 100%; }
+  .footer-copyright { text-align: center; }
 }
 @media (max-width: 480px) {
   .footer-columns { grid-template-columns: 1fr; }

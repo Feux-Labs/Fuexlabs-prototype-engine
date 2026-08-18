@@ -1,180 +1,77 @@
 [
   {
-    "slug": "kv-store-test-co",
-    "name": "KV Store Test Co",
-    "businessType": "generic",
-    "templateId": "saas-dark",
-    "accent": "#1A73E8",
-    "accentDark": "#0B57BE",
-    "heroImage": "/images/business/generic.jpg",
-    "tagline": "Proudly serving your area and beyond.",
-    "about": "Your Business is committed to delivering great service and real value to every customer.",
-    "sectionTitle": "What We Do",
+    "slug": "sample-bright-horizons-academy",
+    "name": "Bright Horizons Academy",
+    "businessType": "school",
+    "templateId": "elegant-split",
+    "accent": "#188038",
+    "accentDark": "#0F6926",
+    "heroImage": "/images/business/school.jpg",
+    "tagline": "Nurturing young minds in Wuse, Abuja.",
+    "about": "Bright Horizons Academy is committed to providing quality education and a supportive learning environment for every student.",
+    "sectionTitle": "Programs Offered",
     "sectionItems": [
-      {
-        "title": "Reliable Service",
-        "desc": "Consistent results you can count on, every time."
-      },
-      {
-        "title": "Straightforward Approach",
-        "desc": "No jargon — just clear, honest work."
-      },
-      {
-        "title": "Always Reachable",
-        "desc": "Easy to reach when you need us."
-      }
+      { "title": "Structured Curriculum", "desc": "Academic programs designed around each student's growth." },
+      { "title": "Experienced Staff", "desc": "Qualified teachers dedicated to nurturing every learner." },
+      { "title": "Extracurriculars", "desc": "Sports, clubs and activities that build well-rounded students." }
     ],
     "offerings": [
-      {
-        "title": "Quality You Can Trust",
-        "desc": "Consistent, dependable standards behind everything we do."
-      },
-      {
-        "title": "Experienced Team",
-        "desc": "A dedicated team committed to getting it right for you."
-      },
-      {
-        "title": "Trusted & Reliable",
-        "desc": "Built on relationships that keep people coming back."
-      }
-    ],
-    "address": "",
-    "phone": "",
-    "createdAt": "2026-08-18T10:12:29.678Z"
-  },
-  {
-    "slug": "copy-link-test-co-2",
-    "name": "Copy Link Test Co 2",
-    "businessType": "generic",
-    "templateId": "classic",
-    "accent": "#1A73E8",
-    "accentDark": "#0B57BE",
-    "heroImage": "/images/business/generic.jpg",
-    "tagline": "Proudly serving your area and beyond.",
-    "about": "Your Business is committed to delivering great service and real value to every customer.",
-    "sectionTitle": "What We Do",
-    "sectionItems": [
-      {
-        "title": "Reliable Service",
-        "desc": "Consistent results you can count on, every time."
-      },
-      {
-        "title": "Straightforward Approach",
-        "desc": "No jargon — just clear, honest work."
-      },
-      {
-        "title": "Always Reachable",
-        "desc": "Easy to reach when you need us."
-      }
-    ],
-    "offerings": [
-      {
-        "title": "Quality You Can Trust",
-        "desc": "Consistent, dependable standards behind everything we do."
-      },
-      {
-        "title": "Experienced Team",
-        "desc": "A dedicated team committed to getting it right for you."
-      },
-      {
-        "title": "Trusted & Reliable",
-        "desc": "Built on relationships that keep people coming back."
-      }
-    ],
-    "address": "",
-    "phone": "",
-    "createdAt": "2026-08-17T20:39:48.233Z"
-  },
-  {
-    "slug": "copy-link-test-co",
-    "name": "Copy Link Test Co",
-    "businessType": "generic",
-    "templateId": "classic",
-    "accent": "#1A73E8",
-    "accentDark": "#0B57BE",
-    "heroImage": "/images/business/generic.jpg",
-    "tagline": "Proudly serving your area and beyond.",
-    "about": "Your Business is committed to delivering great service and real value to every customer.",
-    "sectionTitle": "What We Do",
-    "sectionItems": [
-      {
-        "title": "Reliable Service",
-        "desc": "Consistent results you can count on, every time."
-      },
-      {
-        "title": "Straightforward Approach",
-        "desc": "No jargon — just clear, honest work."
-      },
-      {
-        "title": "Always Reachable",
-        "desc": "Easy to reach when you need us."
-      }
-    ],
-    "offerings": [
-      {
-        "title": "Quality You Can Trust",
-        "desc": "Consistent, dependable standards behind everything we do."
-      },
-      {
-        "title": "Experienced Team",
-        "desc": "A dedicated team committed to getting it right for you."
-      },
-      {
-        "title": "Trusted & Reliable",
-        "desc": "Built on relationships that keep people coming back."
-      }
-    ],
-    "address": "",
-    "phone": "",
-    "createdAt": "2026-08-17T20:37:57.756Z"
-  },
-  {
-    "slug": "sunrise-kids-academy",
-    "name": "Sunrise Kids Academy",
-    "businessType": "generic",
-    "templateId": "split-modern",
-    "accent": "#C99700",
-    "accentDark": "#8A6900",
-    "heroIcon": "🏢",
-    "tagline": "Proudly serving your area and beyond.",
-    "about": "Your Business is committed to delivering great service and real value to every customer.",
-    "sectionTitle": "What We Do",
-    "sectionItems": [
-      {
-        "icon": "✅",
-        "title": "Reliable Service",
-        "desc": "Consistent results you can count on, every time."
-      },
-      {
-        "icon": "💡",
-        "title": "Straightforward Approach",
-        "desc": "No jargon — just clear, honest work."
-      },
-      {
-        "icon": "💬",
-        "title": "Always Reachable",
-        "desc": "Easy to reach when you need us."
-      }
-    ],
-    "offerings": [
-      {
-        "icon": "✨",
-        "title": "Quality You Can Trust",
-        "desc": "Consistent, dependable standards behind everything we do."
-      },
-      {
-        "icon": "🤝",
-        "title": "Experienced Team",
-        "desc": "A dedicated team committed to getting it right for you."
-      },
-      {
-        "icon": "🛡️",
-        "title": "Trusted & Reliable",
-        "desc": "Built on relationships that keep people coming back."
-      }
+      { "title": "Quality You Can Trust", "desc": "Consistent, dependable standards behind everything we do." },
+      { "title": "Experienced Team", "desc": "A dedicated team committed to getting it right for you." },
+      { "title": "Trusted & Reliable", "desc": "Built on relationships that keep people coming back." }
     ],
     "address": "Wuse 2, Abuja",
-    "phone": "08099998888",
-    "createdAt": "2026-08-17T19:58:16.573Z"
+    "phone": "08012345678",
+    "createdAt": "2026-08-18T09:00:00.000Z"
+  },
+  {
+    "slug": "sample-the-grill-house",
+    "name": "The Grill House",
+    "businessType": "restaurant",
+    "templateId": "saas-dark",
+    "accent": "#D97757",
+    "accentDark": "#B15A3E",
+    "heroImage": "/images/business/restaurant.jpg",
+    "tagline": "Fresh flavors, made with love in Lekki.",
+    "about": "The Grill House serves great food in a warm atmosphere, using quality ingredients in every dish we make.",
+    "sectionTitle": "Menu Highlights",
+    "sectionItems": [
+      { "title": "Signature Dishes", "desc": "Crowd favorites made fresh, every single time." },
+      { "title": "Great Drinks", "desc": "A drinks menu that pairs perfectly with your meal." },
+      { "title": "Dine-in & Delivery", "desc": "Enjoy it at our tables or order straight to your door." }
+    ],
+    "offerings": [
+      { "title": "Quality You Can Trust", "desc": "Consistent, dependable standards behind everything we do." },
+      { "title": "Experienced Team", "desc": "A dedicated team committed to getting it right for you." },
+      { "title": "Trusted & Reliable", "desc": "Built on relationships that keep people coming back." }
+    ],
+    "address": "Lekki Phase 1, Lagos",
+    "phone": "08023456789",
+    "createdAt": "2026-08-18T09:05:00.000Z"
+  },
+  {
+    "slug": "sample-metro-realty-group",
+    "name": "Metro Realty Group",
+    "businessType": "realestate",
+    "templateId": "split-modern",
+    "accent": "#1A73E8",
+    "accentDark": "#0B57BE",
+    "heroImage": "/images/business/realestate.jpg",
+    "tagline": "Finding your next home in Abuja.",
+    "about": "Metro Realty Group helps clients buy, sell and rent property with clear guidance from start to finish.",
+    "sectionTitle": "Featured Listings",
+    "sectionItems": [
+      { "title": "Homes for Sale", "desc": "A range of properties to fit every budget and need." },
+      { "title": "Rentals", "desc": "Verified rental listings across the city." },
+      { "title": "Property Advisory", "desc": "Expert guidance to help you make the right call." }
+    ],
+    "offerings": [
+      { "title": "Quality You Can Trust", "desc": "Consistent, dependable standards behind everything we do." },
+      { "title": "Experienced Team", "desc": "A dedicated team committed to getting it right for you." },
+      { "title": "Trusted & Reliable", "desc": "Built on relationships that keep people coming back." }
+    ],
+    "address": "Jabi, Abuja",
+    "phone": "08034567890",
+    "createdAt": "2026-08-18T09:10:00.000Z"
   }
 ]

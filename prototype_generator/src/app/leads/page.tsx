@@ -19,7 +19,7 @@ export default async function LeadsPage() {
     <div className={styles.wrap}>
       <div className={styles.header}>
         <div className={styles.title}>Saved Prototypes ({records.length})</div>
-        <Link href="/" className={styles.back}>
+        <Link href="/create" className={styles.back}>
           ← Back to generator
         </Link>
       </div>
