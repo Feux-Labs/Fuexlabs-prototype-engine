@@ -1,9 +1,9 @@
-import GlowRibbon from "@/components/GlowRibbon";
-import RotatingHeadline from "@/components/RotatingHeadline";
-import ThemeToggle from "@/components/ThemeToggle";
-import ServicesSection from "@/components/ServicesSection";
-import Logo from "@/components/Logo";
-import { WhatsAppIcon, FacebookIcon, InstagramIcon, ClockIcon } from "@/components/icons";
+import GlowRibbon from "../components/GlowRibbon";
+import RotatingHeadline from "../components/RotatingHeadline";
+import ThemeToggle from "../components/ThemeToggle";
+import ServicesSection from "../components/ServicesSection";
+import Logo from "../components/Logo";
+import { WhatsAppIcon, FacebookIcon, InstagramIcon, ClockIcon } from "../components/icons";
 
 const PHONE_DISPLAY = "0906 646 2428";
 const PHONE_TEL = "tel:+2349066462428";
